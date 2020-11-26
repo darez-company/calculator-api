@@ -24,7 +24,7 @@ module.exports = async () => {
             console.error(`error on connecting to DB: ${err.message}`)
             throw new Error(err)
         }
-        logger.error(`error on connecting to DB: ${err.message}`)
+        console.error(`error on connecting to DB: ${err.message}`)
         throw new Error(err)
     }
 }
