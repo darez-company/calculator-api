@@ -1,0 +1,8 @@
+branch-defaults:
+  main:
+    environment: ProdCalculatorApi-env
+global:
+  application_name: Prod-CalculatorApi-env
+  default_platform: Node.js 12 running on 64bit Amazon Linux 2/5.2.3
+  default_region: us-east-1
+  sc: git
