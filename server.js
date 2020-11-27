@@ -14,5 +14,5 @@ app.use(compression())
 app.use(cors())
 
 app.use('/entry', entryRouter)
-
+app.use('/', (req, res) => res.status(200).end())
 module.exports = app
