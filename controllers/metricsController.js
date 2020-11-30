@@ -12,7 +12,6 @@ const getMetrics = async ({ params: { companyID }, query: { queryDate } }, res) 
         const entries = await calculatorEntries.findOne({ userCompanyID: companyID, date: queryDate || date }).exec()
         if (!entries || !entries.entries) return res.status(204).end()
         const excelName = await generateExcel(entries.entries, queryDate || date)
-        res.header('Content-Type', 'text/csv');
         res.download(`${__dirname}/../${excelName}`)
         await sleep(1000)
         fs.unlink(`${__dirname}/../${excelName}`, err => {
