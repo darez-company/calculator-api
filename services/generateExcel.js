@@ -31,7 +31,7 @@ module.exports = (entries, date) => new Promise(resolve => {
     worksheet.cell(1,6).string('Cartão').style(styles.headerText);
     worksheet.cell(1,7).string('Total').style(styles.headerText);
     entries.forEach((entry, index) => {
-        entry.type === 'MONEY' ? worksheet.cell(index + 2, 5).string(`R$ ${entry.amount}`) : worksheet.cell(index + 2, 6).string(`R$ ${entry.amount}`)
+        entry.type === 'MONEY' ? worksheet.cell(index + 2, 5).string(`R$ ${entry.amount.toLocaleString("pt", {useGrouping: false, minimumFractionDigits: 2})}`) : worksheet.cell(index + 2, 6).string(`R$ ${entry.amount.toLocaleString("pt", {useGrouping: false, minimumFractionDigits: 2})}`)
         worksheet.cell(index + 2, 1).string(moment(entry.timestamp).format('DD/MM/YYYY'))
         worksheet.cell(index + 2, 2).string(moment(entry.timestamp).format('HH:mm'))
         worksheet.cell(index + 2, 3).string('Adicione uma descrição').style(styles.descriptionText)
