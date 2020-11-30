@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose')
 
 const entrySchema = new Schema({
-    type: { type: String, enum: ['CARD', 'MONEY'] ,required: true },
+    type: { type: String, enum: ['CARD', 'MONEY'], required: true },
     amount: { type: Number, required: true },
     timestamp: { type: Date, default: Date.now() }
 })

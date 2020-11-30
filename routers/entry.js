@@ -6,6 +6,6 @@ const { createEntrySchema } = require('../routesSchemas/entrySchemas')
 
 const entryRouter = Router()
 
-entryRouter.post('/', validator.body(createEntrySchema) ,entryController.createEntry)
+entryRouter.post('/', validator.body(createEntrySchema), entryController.createEntry)
 
 module.exports = entryRouter

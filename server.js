@@ -5,6 +5,7 @@ const cors = require('cors')
 const compression = require('compression')
 
 const entryRouter = require('./routers/entry')
+const metricsRouter = require('./routers/metrics')
 
 const app = express()
 
@@ -14,5 +15,6 @@ app.use(compression())
 app.use(cors())
 
 app.use('/entry', entryRouter)
+app.use('/metrics', metricsRouter)
 app.use('/', (req, res) => res.status(200).end())
 module.exports = app
