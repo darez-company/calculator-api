@@ -8,8 +8,9 @@ async function startServer() {
     })
     await database()
  } catch (err) {
-     console.error(err)
-     process.exit(0)
+    console.log('Error')
+    console.error(err)
+    process.exit(0)
  }
 }
 
