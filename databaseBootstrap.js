@@ -8,7 +8,7 @@ const getDbURL = () => {
     )
         ? `mongodb://${process.env.DB_MONGODB_USER}:${process.env.DB_MONGODB_PASS}@${process.env.DATABASE_HOST}`
             + `:${process.env.DATABASE_PORT}/${process.env.DATABASE_NAME}`
-        : 'mongodb+srv://calculator_api:j3zPpBuy9SH9VBa7@cluster0.f5im2.mongodb.net/calculator-api'
+        : 'mongodb://localhost:27017/calculator-database'
 }
 
 module.exports = async () => {

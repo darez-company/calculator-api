@@ -1,6 +1,5 @@
 const http = require('./server')
 const database = require('./databaseBootstrap')
-const moment = require('moment')
 
 async function startServer() {
  try {
@@ -15,4 +14,3 @@ async function startServer() {
 }
 
 startServer()
-// moment().format('DD-MM-YYYY')

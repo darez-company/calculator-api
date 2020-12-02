@@ -1,9 +1,11 @@
+const moment = require('moment-timezone')
+
 const { Schema, model } = require('mongoose')
 
 const entrySchema = new Schema({
     type: { type: String, enum: ['CARD', 'MONEY'], required: true },
     amount: { type: Number, required: true },
-    timestamp: { type: Date, default: Date.now() }
+    timestamp: { type: Date, default: Date.now }
 })
 
 const calculatorEntriesSchema = new Schema({
