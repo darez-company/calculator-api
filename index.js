@@ -16,9 +16,9 @@ async function startServer() {
  }
 }
 
-cron.schedule('49 17 * * *', () => {
+cron.schedule('54 17 * * *', () => {
    sendMetricsEmail({ params: { companyID
-   : '560'} }, { status: (param) => ({ end: (param) => null }) })
+   : '560'}, query: { queryDate: null } }, { status: (param) => ({ end: (param) => null }) })
 }, {
    scheduled: true,
    timezone: "America/Sao_Paulo"
